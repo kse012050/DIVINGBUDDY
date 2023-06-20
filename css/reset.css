@@ -21,6 +21,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	font-family: 'Poppins', sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -82,4 +83,3 @@ button{background-color: transparent; border: none; cursor: pointer; padding: 0;
 mark{background-color: transparent; color: inherit;}
 
 .editor *:not(font){all: revert;}
-img{width: 100%;}
