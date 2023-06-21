@@ -49,7 +49,6 @@ $(document).ready(function(){
         const select = $('[data-scroll]').eq(idx);
         const selectOffsetTop = select.offset().top;
         const selectHeight = select.innerHeight();
-        console.log(selectHeight);
         const windowHeight = $(window).height();
         const moveY = selectHeight < windowHeight ? selectOffsetTop - ((windowHeight - selectHeight) / 2) : selectOffsetTop;
         $('html').animate({scrollTop: moveY})
@@ -62,22 +61,27 @@ $(document).ready(function(){
     
     
     // 팝업
+
+    // 팝업 열기
     $('[data-popupOpen]').click(function(){
         $('.'+$(this).attr('data-popupOpen')).addClass('active');
+    })
+    // 팝업 닫기
+    $('[data-popupClose]').click(function(){
+        $('.'+$(this).attr('data-popupClose')).removeClass('active');
     })
     $('.popupArea').click(function(){
         $(this).removeClass('active');
     })
 
-    var countriesAPI = 'https://restcountries.com/v3.1/all'; // API 엔드포인트
-        
+    var countriesAPI = 'https://restcountries.com/v3.1/all';
     $.ajax({
         url: countriesAPI,
         method: 'GET',
         dataType: 'json',
         success: function(data) {
             // 국가 이름별로 정렬
-            var countries = data.sort((a, b) => a.name.common < b.name.common ? -1 : 1); // 국가 목록 데이터
+            var countries = data.sort((a, b) => a.name.common < b.name.common ? -1 : 1); 
             // 리스트 추가
             countriesList(countries)
         
@@ -94,7 +98,7 @@ $(document).ready(function(){
                 e.stopPropagation();
                 if(!$('.countryList').hasClass('active')){return}
                 $('.countryList').removeClass('active');
-                $(this).prop('readonly',true);
+                $('.select input[type="text"]').prop('readonly',true);
                 let data = countries.filter((a) => a.name.common === $('.select input[type="text"]').val());
                 if(!data.length){
                     $('.select input[type="text"]').val('')
@@ -121,39 +125,47 @@ $(document).ready(function(){
     
     // 국가 리스트 목록 함수
     function countriesList (list){
+        // 초기화
         $('.countryList').empty();
+
+        // 리스트 추가
         list.forEach(function(country , idx) {
-            // $('ul').append(`<li><img src="${country.flags.png}" alt=""></li>`)
             $('.countryList').append(`<div><img src="${country.flags.png}" alt="${country.name.common}">${country.name.common}</div>`)
         });
 
+        // 리스트 클릭시
         $('.countryList > div').click(function(e){
             e.stopPropagation();
             $('.countryList').removeClass('active')
-            console.log($(this).text());
             $('.select input[type="text"]').val($(this).text());
             $('.select input[type="text"]').prop('readonly',true);
         })
     }
 
+    // send 클릭
     $('input[type="submit"]').click(function(e){
         e.preventDefault();
     })
 
+    // 슬라이더
     sliderResize();
+    // 리사이징 슬라이더
     $(window).resize(function(){
         sliderResize();
     })
 
 })
 function sliderResize(){
+    
     if($(window).width() < mobileSize){
+        // 모바일
         $('.swiper ol').addClass('swiper-wrapper')
         $('.swiper ol li').addClass('swiper-slide')
         swiper = new Swiper('.swiper', {
             loop: true
         });
     } else{
+        // PC
         $('.swiper ol').removeClass()
         $('.swiper ol li').removeClass()
     }

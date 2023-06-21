@@ -1,37 +1,39 @@
 @media screen and (max-width: 899px) {
     body:has(nav.active){overflow: hidden;}
     /* 팝업 */
-    .popupArea{text-align: left; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 1000;}
+    .popupArea{ position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 1000;}
     .popupArea.active{display: flex;}
-    .popupArea > div{width: calc(100% - 100px); max-width: 1025px; display: flex; height: 618px;}
-    .popupArea > div > div{display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;}
-    .popupArea > div .leftArea{flex: 415; padding-inline: 6.8%; background-color: #1d262d;}
-    .popupArea > div .leftArea img{width: 138px; margin-bottom: 35px;}
-    .popupArea > div .leftArea strong{font-size: 24px; color: white; font-weight: 600;}
-    .popupArea > div .leftArea strong small{font-size: 15px; line-height: 30px; font-weight: 500; display: block; margin-bottom: 35px;}
-    .popupArea > div .leftArea p{font-size: 14px; line-height: 24px; color: #acacac;}
-    .popupArea > div .rightArea{flex: 610; background-color: white; padding-inline: 4.8%; color: #0a0d13;}
-    .popupArea > div .rightArea fieldset ul li:not(:last-child){margin-bottom: 40px;}
-    .popupArea > div .rightArea fieldset ul li strong{display: block; font-size: 20px; line-height: 24px; font-weight: 600; margin-bottom: 20px;}
+    .popupArea > div{width: 100%; height: 100%; display: flex; flex-direction: column; position: relative;}
+    /* .popupArea > div > div{display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;} */
+    .popupArea > div .leftArea{ padding-block: 50px; background-color: #1d262d;}
+    .popupArea > div .leftArea img{width: 115px; margin-bottom: 10px; }
+    .popupArea > div .leftArea strong{display: block; font-size: 20px; line-height: 25px; color: white; font-weight: 600;}
+    .popupArea > div .leftArea strong small{font-size: 15px; line-height: 30px; font-weight: 500; display: block;}
+    .popupArea > div .leftArea p{display: none;}
+    .popupArea > div .rightArea{text-align: left; flex: 1; background-color: white; padding: 20px 30px; color: #0a0d13;}
+    .popupArea > div .rightArea fieldset ul li:not(:last-child){margin-bottom: 25px;}
+    .popupArea > div .rightArea fieldset ul li strong{display: block; font-size: 12.5px; line-height: 15px; font-weight: 600; margin-bottom: 12px;}
     .popupArea > div .rightArea fieldset ul li input[type="radio"]{display: none;}
-    .popupArea > div .rightArea fieldset ul li input[type="radio"] + label{display: inline-flex; align-items: center; font-size: 20px; font-weight: 500; line-height: 24px; color: #979797; cursor: pointer;}
-    .popupArea > div .rightArea fieldset ul li input[type="radio"] + label:not(:last-of-type){margin-right: 15px;}
-    .popupArea > div .rightArea fieldset ul li input[type="radio"] + label::before{content: ''; width: 21px; height: 22px; background-image: url('../images/icon-radio.png'); background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 8px;}
+    .popupArea > div .rightArea fieldset ul li input[type="radio"] + label{display: inline-flex; align-items: center; font-size: 12.5px; font-weight: 500; line-height: 15px; color: #979797; cursor: pointer;}
+    .popupArea > div .rightArea fieldset ul li input[type="radio"] + label:not(:last-of-type){margin-right: 20px;}
+    .popupArea > div .rightArea fieldset ul li input[type="radio"] + label::before{content: ''; width: 14px; height: 14px; background-image: url('../images/icon-radio.png'); background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 5px;}
     .popupArea > div .rightArea fieldset ul li input[type="radio"]:checked + label{color: #0a0d13;}
     .popupArea > div .rightArea fieldset ul li input[type="radio"]:checked + label::before{background-image: url('../images/icon-radio-check.png');}
-    .popupArea > div .rightArea fieldset ul li input:is([type="text"] , [type="email"]){width: 100%; height: 48px; font-size: 17px; padding-inline: 20px; box-sizing: border-box; border: 2px solid #979797; border-radius: 5px;}
+    .popupArea > div .rightArea fieldset ul li input:is([type="text"] , [type="email"]){width: 100%; height: 30px; font-size: 10px; padding-inline: 14px; box-sizing: border-box; border: 2px solid #979797; border-radius: 5px;}
     .popupArea > div .rightArea fieldset ul li input:is([type="text"] , [type="email"])::placeholder{color: #979797;}
-    .popupArea > div .rightArea fieldset input[type="submit"]{width: 100%; height: 48px; font-size: 17px; color: white; background-color: #097fda; border-radius: 5px; border: none; margin-top: 40px;}
+    .popupArea > div .rightArea fieldset input[type="submit"]{width: 100%; height: 30px; font-size: 10px; color: white; background-color: #097fda; border-radius: 5px; border: none; margin-top: 25px;}
+    .popupArea > div .rightArea fieldset p{font-size: 10px; color: #acacac; line-height: 20px; margin-top: 15px;}
     .popupArea > div .rightArea fieldset ul li.select{position: relative;}
-    .popupArea > div .rightArea fieldset ul li.select input[type="text"]{background-image: url('../images/icon-search.png'); background-repeat: no-repeat; background-position: right 20px center; background-size: 17px; cursor: pointer;}
+    .popupArea > div .rightArea fieldset ul li.select input[type="text"]{background-image: url('../images/icon-search.png'); background-repeat: no-repeat; background-position: right 14px center; background-size: 11px; cursor: pointer;}
     .popupArea > div .rightArea fieldset ul li.select input[type="text"][readonly]{background-image: url('../images/icon-down.png');}
     .popupArea > div .rightArea fieldset ul li.select .countryList{display: none; position: absolute; left: 0; top: 100%; width: 100%; max-height: 263px; background-color: white; overflow: auto;}
     .popupArea > div .rightArea fieldset ul li.select .countryList.active{display: block;}
     .popupArea > div .rightArea fieldset ul li.select .countryList::-webkit-scrollbar{width: 2px;}
     .popupArea > div .rightArea fieldset ul li.select .countryList::-webkit-scrollbar-thumb{background-color: #2e9fff;}
-    .popupArea > div .rightArea fieldset ul li.select .countryList div{display: flex; align-items: center; font-size: 15px; color: #8e8e8e; padding-block: 7.5px; cursor: pointer;}
+    .popupArea > div .rightArea fieldset ul li.select .countryList div{display: flex; align-items: center; font-size: 10px; color: #8e8e8e; padding-block: 7.5px; cursor: pointer;}
     .popupArea > div .rightArea fieldset ul li.select .countryList div:hover{background-color: #a1d4fc; color: #0a0d13; font-weight: 500;}
-    .popupArea > div .rightArea fieldset ul li.select .countryList div img{width: 50px; margin-right: 20px;}
+    .popupArea > div .rightArea fieldset ul li.select .countryList div img{width: 35px; margin-right: 10px;}
+    .popupArea > div > button{position: absolute; right: 25px; top: 15px; width: 42px; aspect-ratio: 1 / 1; background: url('../images/icon-close.png') no-repeat center / cover; text-indent: -9999px;}
 
     /* 해더  */
     header{position: sticky; left: 0; top: 0; height: 80px; display: flex; justify-content: space-between; align-items: center; padding-inline: 20px; background-color: #1d262d; z-index: 100;}
