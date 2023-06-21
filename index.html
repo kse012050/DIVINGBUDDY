@@ -16,7 +16,7 @@
         <button>메뉴 열기</button>
         <nav>
             <ul>
-                <li><a href="">Intro video</a></li>
+                <li class="active"><a href="">Intro video</a></li>
                 <li><a href="">Request invite</a></li>
                 <li><a href="">Features</a></li>
                 <li><a href="">Free Trial Diving Campaign</a></li>
@@ -40,9 +40,51 @@
             <p>
                 Coming to iOS and Android.
             </p>
-            <button>Request Invite</button>
+            <button data-popupOpen="popupArea">Request Invite</button>
             <div class="popupArea">
-                <div></div>
+                <div>
+                    <div class="leftArea">
+                        <img src="images/logo.png" alt="DIVING BUEDDY">
+                        <strong>
+                            Request an invite
+                            <small>Please enter your information</small>
+                        </strong>
+                        <p>Your personal data will be used to notify you of the release of the Diving Buddy app and to enhance your experience throughout this website.</p>
+                    </div>
+                    <div class="rightArea">
+                        <form>
+                            <fieldset>
+                                <ul>
+                                    <li>
+                                        <strong>Diving Type</strong>
+                                        <input type="radio" name="divingType" id="free" checked>
+                                        <label for="free">Free Diving</label>
+                                        <input type="radio" name="divingType" id="scuba">
+                                        <label for="scuba">Scuba Diving</label>
+                                    </li>
+                                    <li>
+                                        <strong>Diving Level</strong>
+                                        <input type="radio" name="divingLevel" id="instructor" checked>
+                                        <label for="instructor">Instructor</label>
+                                        <input type="radio" name="divingLevel" id="diver">
+                                        <label for="diver">Diver</label>
+                                        <input type="radio" name="divingLevel" id="trainee">
+                                        <label for="trainee">Trainee</label>
+                                    </li>
+                                    <li class="select">
+                                        <input type="text" placeholder="Select Conutry" readonly>
+                                        <div class="countryList">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <input type="email" placeholder="Enter your Email Address">
+                                    </li>
+                                </ul>
+                                <input type="submit" value="Send">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
             </div>        
         </div>
     </section>
@@ -106,12 +148,10 @@
 
     <div class="campaignArea" data-scroll>
         <div>
-            <div>
-                <p>Diving Buddy has exciting plans for a free trial diving campaign, aiming to provide an unforgettable experience to 10,000 people in each city worldwide.</p>
-                <p>We warmly invite all instructors, divers, and trainees to join us now in this exciting campaign to support you better</p>
-                <p>The first city will be announced based on the country with the most participants after the official launch of the app. </p>
+            <p>Diving Buddy has exciting plans for a free trial diving campaign, aiming to provide an unforgettable experience to 10,000 people in each city worldwide.</p>
+            <p>We warmly invite all instructors, divers, and trainees to join us now in this exciting campaign to support you better</p>
+            <p>The first city will be announced based on the country with the most participants after the official launch of the app. </p>
                 <p>Request an invite now! <a href="">Click or tap here</a></p>
-            </div>
         </div>
     </div>
 

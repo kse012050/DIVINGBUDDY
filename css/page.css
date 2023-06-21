@@ -9,11 +9,11 @@
 .inviteArea{/* height: 100vh; */ background: url('../images/inviteBG.png'); color: white; text-align: center;}
 .inviteArea > div{height: 100%; display: flex; flex-direction: column; align-items: center; padding-top: 100px; box-sizing: border-box;}
 .inviteArea > div::after{content: ''; width: 66.4%; max-width: 1275px; aspect-ratio: 1275 / 454; margin-top: auto; background: url('../images/inviteImg.png') no-repeat center / cover;}
-.inviteArea > div h2{font-size: 40px;}
-.inviteArea > div p{font-size: 24px; line-height: 45px; max-width: 800px;}
-.inviteArea > div p:first-of-type{margin: 60px 0;}
-.inviteArea > div button{font-size: 17px; width: 256px; line-height: 70px; background-color: #1d262d; border-radius: 50px; margin-top: 30px; position: relative;}
-.inviteArea > div button::after{content: ''; position: absolute; inset: 5px; border: 2px solid #0071e3; border-radius: inherit;}
+.inviteArea > div > h2{font-size: 40px;}
+.inviteArea > div > p{font-size: 24px; line-height: 45px; max-width: 800px;}
+.inviteArea > div > p:first-of-type{margin: 60px 0;}
+.inviteArea > div > button{font-size: 17px; width: 256px; line-height: 70px; background-color: #1d262d; border-radius: 50px; margin-top: 30px; position: relative;}
+.inviteArea > div > button::after{content: ''; position: absolute; inset: 5px; border: 2px solid #0071e3; border-radius: inherit;}
 
 /* features */
 .featuresArea > *{}
@@ -50,16 +50,17 @@
 .featuresArea .freeArea h2::before{content: ''; position: absolute; left: -149px; top: 50%; transform: translateY(-50%); background: url('../images/features05-img.png') no-repeat center / cover; width: 340.7px; height: 740px;}
 .featuresArea .freeArea p{padding: 42px 4.89% 85px 2.5%; box-sizing: border-box;}
 
-.campaignArea{padding: 85px 0; background-color: #f5f6f8;}
-.campaignArea > div{max-width: 1700px; margin: 0 auto; display: flex; align-items: center;}
-.campaignArea > div::before , .campaignArea > div::after{content: ''; flex-shrink: 0; background-repeat: no-repeat; background-position: center; background-size: cover;}
-.campaignArea > div::before{ width: 330px; aspect-ratio: 1 / 1; background-image: url('../images/campaingImg01.png');}
-.campaignArea > div::after{ width: 450px; aspect-ratio: 450 / 315; background-image: url('../images/campaingImg02.png');}
-.campaignArea > div div{margin: 0 45px;}
-.campaignArea > div div p{font-size: 20px; line-height: 35px;}
-.campaignArea > div div p:not(:last-child){margin-bottom: 35px;}
-.campaignArea > div div p a{color: #2e9fff; font-weight: 500;}
+/* campaign */
+.campaignArea{--backgroundColor: #f5f6f8; padding: 85px 0; background-color: var(--backgroundColor); max-width: 1700px; margin: 0 auto; display: flex; align-items: center; box-shadow: 0 0 0 100vmax var(--backgroundColor); clip-path: inset(0 -100vmax);}
+.campaignArea::before , .campaignArea::after{content: ''; flex-shrink: 0; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.campaignArea::before{ width: 330px; aspect-ratio: 1 / 1; background-image: url('../images/campaingImg01.png');}
+.campaignArea::after{ width: 450px; aspect-ratio: 450 / 315; background-image: url('../images/campaingImg02.png');}
+.campaignArea div{margin: 0 45px;}
+.campaignArea div p{font-size: 20px; line-height: 35px;}
+.campaignArea div p:not(:last-child){margin-bottom: 35px;}
+.campaignArea div p a{color: #2e9fff; font-weight: 500;}
 
+/* app */
 .appArea{max-width: 1400px; margin: 0 auto; padding-block: 250px; padding-right: 37%; box-sizing: border-box; position: relative;}
 .appArea::after{content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 28.5%; aspect-ratio: 398.1 / 591.3; background: url('../images/appImg.png') no-repeat center / cover;}
 .appArea h2{font-size: 40px; color: #78879c; margin-bottom: 75px;}
