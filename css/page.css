@@ -21,16 +21,17 @@
     .featuresArea :is(.stepsArea , .profilesArea){display: flex; /* min-height: 1080px; */}
     .featuresArea .stepsArea{flex-direction: column;}
     .featuresArea > *:not(.freeArea) h2{font-size: 40px; color: #78879c; margin-bottom: 30px;}
-    .featuresArea > * p{font-size: 20px; line-height: 2; color: #1d262d;}
+    .featuresArea > * p{font-size: 20px; line-height: 2; color: rgba(29, 38, 45, 0.5);}
 
     .featuresArea .stepsArea{width: calc(100% - 100px); justify-content: center; align-items: center; text-align: center; padding: 120px 0; margin: 0 auto;}
-    .featuresArea .stepsArea p{margin-bottom: 150px;}
-    .featuresArea .stepsArea ol{width: 100%; max-width: 1650px; display: flex; justify-content: center; gap: 11%;}
-    .featuresArea .stepsArea ol li{max-width: 486px;}
-    .featuresArea .stepsArea ol li:not(:last-child){position: relative;}
-    .featuresArea .stepsArea ol li:not(:last-child):after{content: ''; position: absolute; right: -25%; top: 50%; transform: translateY(-50%); width: 7.7%; aspect-ratio: 33 / 66; background: url('../images/icon-next.png') no-repeat center / cover;}
-    .featuresArea .stepsArea ol li b{display: block; font-size: 24px; font-weight: 600; color: #53585b; margin-bottom: 10px;}
-    .featuresArea .stepsArea ol li img{width: 100%;}
+    .featuresArea .stepsArea p:last-of-type{margin-bottom: 150px;}
+    .featuresArea .stepsArea .swiper{overflow: visible; width: 100%; max-width: 1650px;}
+    .featuresArea .stepsArea .swiper ol{display: flex; justify-content: center; gap: 11%;  margin: 0 auto;}
+    .featuresArea .stepsArea .swiper ol li{max-width: 486px;}
+    .featuresArea .stepsArea .swiper ol li:not(:last-child){position: relative;}
+    .featuresArea .stepsArea .swiper ol li:not(:last-child):after{content: ''; position: absolute; right: -25%; top: 50%; transform: translateY(-50%); width: 7.7%; aspect-ratio: 33 / 66; background: url('../images/icon-next.png') no-repeat center / cover;}
+    .featuresArea .stepsArea .swiper ol li b{display: block; font-size: 24px; font-weight: 600; color: #53585b; margin-bottom: 10px;}
+    .featuresArea .stepsArea .swiper ol li img{width: 100%;}
 
     .featuresArea .profilesArea{align-items: center; width: calc(100% - 120px); margin: 0 auto; padding: 110px 0;}
     .featuresArea .profilesArea img{max-width: 604px; width: 33.55%; margin-right: 4.27%;}
@@ -57,7 +58,7 @@
     .campaignArea::before{ width: 330px; aspect-ratio: 1 / 1; background-image: url('../images/campaingImg01.png');}
     .campaignArea::after{ width: 450px; aspect-ratio: 450 / 315; background-image: url('../images/campaingImg02.png');}
     .campaignArea div{margin: 0 45px;}
-    .campaignArea div p{font-size: 20px; line-height: 35px;}
+    .campaignArea div p{font-size: 20px; line-height: 35px; color: rgba(0, 0, 0, 0.5);}
     .campaignArea div p:not(:last-child){margin-bottom: 35px;}
     .campaignArea div p a{color: #2e9fff; font-weight: 500;}
 
@@ -69,6 +70,6 @@
     .appArea div a{position: absolute; top: 0; height: 100%; width: 94px; text-indent: -9999px;}
     .appArea div a:nth-child(1){left: 0;}
     .appArea div a:nth-child(2){right: 0;}
-    .appArea p{font-size: 20px; line-height: 2;}
+    .appArea p{font-size: 20px; line-height: 2; color: rgba(29, 38, 45, 0.5);}
     .appArea p:not(:last-of-type){margin-bottom: 20px;}
 }

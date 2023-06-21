@@ -1,3 +1,4 @@
+const mobileSize = 900;
 $(document).ready(function(){
     // video 재생
     $('.videoArea button').click(function(){
@@ -13,6 +14,11 @@ $(document).ready(function(){
             $(this).prop('controls', false)
             $('.videoArea button').addClass('active');
         }
+    })
+
+    $('header button').click(function(){
+        $(this).toggleClass('active')
+        $('header nav').toggleClass('active');
     })
 
     // 스크롤 네비게이션
@@ -47,6 +53,10 @@ $(document).ready(function(){
         const windowHeight = $(window).height();
         const moveY = selectHeight < windowHeight ? selectOffsetTop - ((windowHeight - selectHeight) / 2) : selectOffsetTop;
         $('html').animate({scrollTop: moveY})
+        if($(window).width() < mobileSize){
+            $('nav').removeClass('active')
+            $('header button').removeClass('active')
+        }
     })
 
     
@@ -129,4 +139,22 @@ $(document).ready(function(){
     $('input[type="submit"]').click(function(e){
         e.preventDefault();
     })
+
+    sliderResize();
+    $(window).resize(function(){
+        sliderResize();
+    })
+
 })
+function sliderResize(){
+    if($(window).width() < mobileSize){
+        $('.swiper ol').addClass('swiper-wrapper')
+        $('.swiper ol li').addClass('swiper-slide')
+        swiper = new Swiper('.swiper', {
+            loop: true
+        });
+    } else{
+        $('.swiper ol').removeClass()
+        $('.swiper ol li').removeClass()
+    }
+}

@@ -1,4 +1,5 @@
-@media screen and (min-width: 900px) and (max-width: 1499px) {
+@media screen and (max-width: 899px) {
+    body:has(nav.active){overflow: hidden;}
     /* 팝업 */
     .popupArea{text-align: left; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 1000;}
     .popupArea.active{display: flex;}
@@ -33,19 +34,18 @@
     .popupArea > div .rightArea fieldset ul li.select .countryList div img{width: 50px; margin-right: 20px;}
 
     /* 해더  */
-    header{/* position: sticky; left: 0; top: 0; width: 100%; */ background-color: #1d262d; z-index: 100;}
-    header h1{max-width: 150px; padding: 25px 0; margin: 0 auto;}
+    header{position: sticky; left: 0; top: 0; height: 80px; display: flex; justify-content: space-between; align-items: center; padding-inline: 20px; background-color: #1d262d; z-index: 100;}
+    header h1{max-width: 150px;}
     header h1 img{width: 100%;}
-    header button{display: none;}
-    header nav{position: fixed; right: 20px; top: 0; height: 100%; display: flex; align-items: center; z-index: 10; pointer-events: none;}
-    header nav ul{}
-    header nav ul li{}
-    header nav ul li:not(:last-child){margin-bottom: 22px;}
-    header nav ul li a{display: block; text-indent: -9999px; width: 12px; height: 12px; background-color: #e5e5e5; border-radius: 100%; pointer-events: all;}
-    header nav ul li.active a{background-color: #2e9fff;}
-    header nav ul li:nth-of-type(2).active a{background-color: white;}
+    header button{width: 50px; height: 50px; background-image: url('../images/icon-menu.png'); background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}
+    header button.active{background-image: url('../images/icon-close.png'); position: relative; z-index: 1;}
+    header nav{position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: none; flex-direction: column; justify-content: flex-start; align-items: center; background-color: #1d262d; padding-top: 120px; box-sizing: border-box;}
+    header nav.active{display: flex;}
+    header nav ul{width: calc(100% - 60px); margin: 0 auto;}
+    header nav ul li{font-size: 14px; color: white; font-weight: 500;}
+    header nav ul li:not(:last-child){margin-bottom: 36px;}
 
     /* 푸터 */
-    footer{padding: 42px 0; background-color: #1c1f28; font-size: 16px; color: white; text-align: center;}
-    footer img{height: 14px;}
+    footer{padding: 39px 0; background-color: #1c1f28; font-size: 11px; color: white; text-align: center;}
+    footer img{height: 7px;}
 }
