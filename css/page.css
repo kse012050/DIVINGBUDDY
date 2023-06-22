@@ -25,13 +25,17 @@
 
     .featuresArea .stepsArea{width: calc(100% - 100px); justify-content: center; align-items: center; text-align: center; padding: 120px 0; margin: 0 auto;}
     .featuresArea .stepsArea p:last-of-type{margin-bottom: 150px;}
-    .featuresArea .stepsArea .swiper{overflow: visible; width: 100%; max-width: 1650px;}
-    .featuresArea .stepsArea .swiper ol{display: flex; justify-content: center; gap: 11%;  margin: 0 auto;}
-    .featuresArea .stepsArea .swiper ol li{max-width: 486px;}
-    .featuresArea .stepsArea .swiper ol li:not(:last-child){position: relative;}
-    .featuresArea .stepsArea .swiper ol li:not(:last-child):after{content: ''; position: absolute; right: -25%; top: 50%; transform: translateY(-50%); width: 7.7%; aspect-ratio: 33 / 66; background: url('../images/icon-next.png') no-repeat center / cover;}
-    .featuresArea .stepsArea .swiper ol li b{display: block; font-size: 24px; font-weight: 600; color: #53585b; margin-bottom: 10px;}
-    .featuresArea .stepsArea .swiper ol li img{width: 100%;}
+    .featuresArea .stepsArea > div > span{display: none;}
+    .featuresArea .stepsArea > div .swiper{overflow: visible; width: 100%; max-width: 1650px;}
+    .featuresArea .stepsArea > div .swiper ol{display: flex; justify-content: center; gap: 11%;  margin: 0 auto;}
+    .featuresArea .stepsArea > div .swiper ol li{max-width: 486px;}
+    .featuresArea .stepsArea > div .swiper ol li:not(:last-child){position: relative;}
+    .featuresArea .stepsArea > div .swiper ol li:not(:last-child):after{content: ''; position: absolute; right: -25%; top: 50%; transform: translateY(-50%); width: 7.7%; aspect-ratio: 33 / 66; background: url('../images/icon-next.png') no-repeat center / cover;}
+    .featuresArea .stepsArea > div .swiper ol li b{display: block; font-size: 24px; font-weight: 600; color: #53585b; margin-bottom: 10px;}
+    .featuresArea .stepsArea > div .swiper ol li img{width: 100%;}
+    .featuresArea .stepsArea > div .swiper .swiper-pagination{display: none;}
+    .featuresArea .stepsArea > div .swiper-button-prev{display: none;}
+    .featuresArea .stepsArea > div .swiper-button-next{display: none;}
 
     .featuresArea .profilesArea{align-items: center; width: calc(100% - 120px); margin: 0 auto; padding: 110px 0;}
     .featuresArea .profilesArea img{max-width: 604px; width: 33.55%; margin-right: 4.27%;}

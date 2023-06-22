@@ -145,6 +145,14 @@ $(document).ready(function(){
     // send 클릭
     $('input[type="submit"]').click(function(e){
         e.preventDefault();
+        let data = {};
+        $(this).parents('fieldset').find('[name][checked]').each(function(){
+            data[$(this)[0].name] = $(this)[0].defaultValue
+        })
+        $(this).parents('fieldset').find('[name]').not('[type="radio"]').each(function(){
+            data[$(this)[0].name] = $(this).val()
+        })
+        console.log(data);
     })
 
     // 슬라이더
@@ -162,7 +170,14 @@ function sliderResize(){
         $('.swiper ol').addClass('swiper-wrapper')
         $('.swiper ol li').addClass('swiper-slide')
         swiper = new Swiper('.swiper', {
-            loop: true
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
         });
     } else{
         // PC
