@@ -157,14 +157,30 @@ $(document).ready(function(){
 
     // 슬라이더
     sliderResize();
+    // 비디오 썸네일
+    videoThum()
     // 리사이징 슬라이더
     $(window).resize(function(){
         sliderResize();
+        videoThum();
     })
 
 })
+// 비디오 썸네일
+function videoThum(){
+    let videoImg =''
+    if($(window).width() < mobileSize){
+        videoImg = 'images/m-video.png'
+        // $('.videoArea video').attr('poster' , 'images/m-video.png')
+    } else {
+        videoImg = 'images/video.png'
+        // $('.videoArea video').attr('poster' , 'images/video.png')
+    }
+    $('.videoArea video').attr('poster' , videoImg)
+}
+
+// 슬라이더
 function sliderResize(){
-    
     if($(window).width() < mobileSize){
         // 모바일
         $('.swiper ol').addClass('swiper-wrapper')
@@ -185,3 +201,4 @@ function sliderResize(){
         $('.swiper ol li').removeClass()
     }
 }
+

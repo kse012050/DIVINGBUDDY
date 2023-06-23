@@ -2,9 +2,9 @@
     /* video. 영역 */
     .videoArea{position: relative; line-height: 0;}
     .videoArea video{width: 100%; height: calc(100vh - 106px); /* max-height: 950px; min-height: 600px; */ object-fit: cover;}
-    .videoArea button{position: absolute; left: 50%; bottom: 135px; transform: translateX(-50%); width: 210px; height: 64px; font-size: 14px; font-weight: 500; color: white; display: flex; justify-content: center; align-items: center; border: 1px solid white; opacity: 0; transition: 0.5s opacity;}
+    .videoArea button{position: absolute; left: 50%; bottom: 135px; transform: translateX(-50%); width: 210px; height: 64px; font-size: 14px; font-weight: 500; color: white; display: flex; justify-content: center; align-items: center; border: 1px solid white; opacity: 0; transition: 0.5s opacity; pointer-events: none;}
     .videoArea button::before{content: ''; width: 25px; height: 25px; background: url('../images/icon-play.png') no-repeat center / cover; margin-right: 8px;}
-    .videoArea button.active{opacity: 1;}
+    .videoArea button.active{opacity: 1; pointer-events: all;}
 
     /* invite 영역 */
     .inviteArea{/* height: 100vh; */ background: url('../images/inviteBG.png'); color: white; text-align: center;}
