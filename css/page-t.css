@@ -1,4 +1,4 @@
-@media screen and (min-width: 900px) and (max-width: 1499px) {
+@media screen and (min-width: 750px) and (max-width: 1499px) {
     /* video. 영역 */
     .videoArea{position: relative; line-height: 0;}
     .videoArea video{width: 100%; height: calc(100vh - 66px); /* max-height: 950px; min-height: 600px; */ object-fit: cover;}
@@ -43,7 +43,7 @@
     .featuresArea .profilesArea img{min-width: 360px; width: 34%; margin-right: 4.27%;}
     .featuresArea .profilesArea figcaption{flex: 1; padding-right: 53px;}
     .featuresArea .profilesArea figcaption h2{line-height: 1.5;}
-    .featuresArea .profilesArea::after{content: ''; display: block;  width: 100%; aspect-ratio: 3 / 1.12; background: url('../images/features02-img02.png') no-repeat center / 38.87%;}
+    .featuresArea .profilesArea::after{content: ''; display: block;  width: 100%; aspect-ratio: 3 / 1.12; background: url('../images/features02-img02.png') no-repeat center / 38.87%; margin-top: 70px;}
 
     .featuresArea .chatArea{width: calc(100% - 100px); text-align: center; max-width: 800px; margin: 0 auto; padding: 55px 0;}
     .featuresArea .chatArea::after{content: ''; display: block; width: 100%; aspect-ratio: 1958 / 1371; margin-top: 80px; background: url('../images/features03-img01.png') no-repeat center / cover;}

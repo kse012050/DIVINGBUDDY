@@ -1,4 +1,4 @@
-const mobileSize = 900;
+const mobileSize = 750;
 $(document).ready(function(){
     // video 재생
     $('.videoArea button').click(function(){
@@ -109,7 +109,7 @@ $(document).ready(function(){
             $('.select input[type="text"]').on('input',function(){
                 let data;
                 if($(this).val()){
-                    data = countries.filter((a) => a.name.common.includes($(this).val()))
+                    data = countries.filter((a) => a.name.common.toLowerCase().includes($(this).val().toLowerCase()))
                 } else {
                     data = countries;
                 }
