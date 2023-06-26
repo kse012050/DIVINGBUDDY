@@ -16,9 +16,18 @@ $(document).ready(function(){
         }
     })
 
+    // 모바일 메뉴
     $('header button').click(function(){
         $(this).toggleClass('active')
         $('header nav').toggleClass('active');
+    })
+
+    $('header nav').click(function(){
+        $(this).toggleClass('active')
+        $('header button').toggleClass('active');
+    })
+    $('header nav ul').click(function(e){
+        e.stopPropagation();
     })
 
     // 스크롤 네비게이션
@@ -50,11 +59,16 @@ $(document).ready(function(){
         const selectOffsetTop = select.offset().top;
         const selectHeight = select.innerHeight();
         const windowHeight = $(window).height();
-        const moveY = selectHeight < windowHeight ? selectOffsetTop - ((windowHeight - selectHeight) / 2) : selectOffsetTop;
-        $('html').animate({scrollTop: moveY})
+        if($(window).width() > mobileSize){
+            const moveY = selectHeight < windowHeight ? selectOffsetTop - ((windowHeight - selectHeight) / 2) : selectOffsetTop;
+            $('html').animate({scrollTop: moveY})
+        }
         if($(window).width() < mobileSize){
+            let moveY = selectOffsetTop
+            if(idx >= 3){moveY = moveY - 100} /* 왜지..? */
             $('nav').removeClass('active')
             $('header button').removeClass('active')
+            $('html').animate({scrollTop: moveY - $('header').height()})
         }
     })
 

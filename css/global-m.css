@@ -40,11 +40,11 @@
     header h1{max-width: 150px;}
     header h1 img{width: 100%;}
     header button{width: 50px; height: 50px; background-image: url('../images/icon-menu.png'); background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}
-    header button.active{background-image: url('../images/icon-close.png'); position: relative; z-index: 1;}
-    header nav{position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: none; flex-direction: column; justify-content: flex-start; align-items: center; background-color: #1d262d; padding-top: 120px; box-sizing: border-box;}
+    header button.active{background-image: url('../images/nav-close.png'); position: relative; z-index: 1;}
+    header nav{position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: none; background-color: rgba(0, 0, 0, 0.5); box-sizing: border-box;}
     header nav.active{display: flex;}
-    header nav ul{width: calc(100% - 60px); margin: 0 auto;}
-    header nav ul li{font-size: 14px; color: white; font-weight: 500;}
+    header nav ul{width: 300px; height: calc(100% + 10px); transform: translateY(-5px); margin-left: auto; padding: 120px 30px 0; background-color: #1d262d;}
+    header nav ul li{font-size: 14px; color: white; font-weight: 500; text-transform: uppercase;}
     header nav ul li:not(:last-child){margin-bottom: 36px;}
 
     /* 푸터 */

@@ -34,6 +34,11 @@
     .popupArea > div .rightArea fieldset ul li.select .countryList div img{width: 50px; margin-right: 20px;}
     .popupArea > div > button{position: absolute; right: 25px; top: 25px; width: 50px; aspect-ratio: 1 / 1; background: url('../images/icon-close.png') no-repeat center / cover; text-indent: -9999px;}
 
+    @media screen and (max-width: 900px){
+        .popupArea > div{flex-direction: column; height: auto;}
+        .popupArea > div > div{padding-block: 4.8%;}
+    }
+
     /* 해더  */
     header{/* position: sticky; left: 0; top: 0; width: 100%; */ background-color: #1d262d; z-index: 100;}
     header h1{max-width: 150px; padding: 25px 0; margin: 0 auto;}

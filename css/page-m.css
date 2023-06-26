@@ -57,7 +57,7 @@
     .featuresArea .freeArea p span{display: block; height: 26px;}
 
     /* campaign */
-    .campaignArea{--backgroundColor: #f5f6f8; padding: 30px 0; background-color: var(--backgroundColor); max-width: 1700px; margin: 0 auto; display: flex; align-items: center; margin-bottom: 60px;}
+    .campaignArea{--backgroundColor: #f5f6f8; padding: 30px 0; background-color: var(--backgroundColor); max-width: 1700px; margin: 0 auto; display: flex; align-items: center;}
     .campaignArea div{width: calc(100% - 60px); margin: 0 auto; text-align: center;}
     .campaignArea div::before , .campaignArea div::after{content: ''; display: block; width: 100%; background-repeat: no-repeat; background-position: center; background-size: cover;}
     .campaignArea div::before{aspect-ratio: 1 / 1; background-image: url('../images/campaingImg01.png'); margin-bottom: 22px;}
@@ -67,7 +67,7 @@
     .campaignArea div p a{display: block; font-size: 15px; color: #2e9fff; font-weight: 500; margin-top: 26px;}
 
     /* app */
-    .appArea{ width: calc(100% - 60px); margin: 0 auto 55px; text-align: center;  box-sizing: border-box; position: relative;}
+    .appArea{ width: calc(100% - 60px); margin: 0 auto 55px; text-align: center;  box-sizing: border-box; position: relative; padding-top: 60px;}
     .appArea::before{content: ''; display: block; width: 100%; aspect-ratio: 318 / 472; background: url('../images/appImg.png') no-repeat center / cover; margin-bottom: 55px;}
     .appArea h2{font-size: 25px; line-height: 40px; color: #78879c; margin-bottom: 35px;}
     .appArea div{width: 110px; height: 36px; background: url('../images/icon-app.png') no-repeat center / cover;  margin: 0 auto 55px; position: relative;}
