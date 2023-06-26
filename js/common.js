@@ -210,6 +210,9 @@ function sliderResize(){
         // 모바일
         $('.swiper ol').addClass('swiper-wrapper')
         $('.swiper ol li').addClass('swiper-slide')
+        $('.swiper ol li').each(function(i){
+            $(this).addClass('slider0' + (i + 1))
+        })
         swiper = new Swiper('.swiper', {
             loop: true,
             pagination: {

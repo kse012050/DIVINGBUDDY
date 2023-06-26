@@ -105,15 +105,15 @@ require_once "/opt/lampp/htdocs/libs/projectLib.php";
             <div>
                 <div class="swiper">
                     <ol class="swiper-wrapper">
-                        <li class="swiper-slide">
+                        <li class="swiper-slide slider01">
                             <b>Matching</b>
                             <img src="images/features01-img01.png" alt="Matching">
                         </li>
-                        <li class="swiper-slide">
+                        <li class="swiper-slide slider02">
                             <b>Chatting</b>
                             <img src="images/features01-img02.png" alt="Chatting">
                         </li>
-                        <li class="swiper-slide">
+                        <li class="swiper-slide slider03">
                             <b>Signing</b>
                             <img src="images/features01-img03.png" alt="Signing">
                         </li>

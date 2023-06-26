@@ -28,9 +28,12 @@
     .featuresArea .stepsArea p:last-of-type{margin-bottom: 45px;}
     .featuresArea .stepsArea > div{position: relative;}
     .featuresArea .stepsArea .swiper{width: 100%;}
-    .featuresArea .stepsArea .swiper ol li{counter-increment: featuresSteps;}
+    /* .featuresArea .stepsArea .swiper ol li{counter-increment: featuresSteps;} */
     .featuresArea .stepsArea .swiper ol li b{display: block; font-size: 20px; font-weight: 600; color: #53585b; margin-bottom: 10px;}
-    .featuresArea .stepsArea .swiper ol li b::before{content: '0'counter(featuresSteps); display: block; font-size: 40px; margin-bottom: 13px;}
+    .featuresArea .stepsArea .swiper ol li b::before{display: block; font-size: 40px; margin-bottom: 13px;}
+    .featuresArea .stepsArea .swiper ol li.slider01 b::before{content: '01';}
+    .featuresArea .stepsArea .swiper ol li.slider02 b::before{content: '02';}
+    .featuresArea .stepsArea .swiper ol li.slider03 b::before{content: '03';}
     .featuresArea .stepsArea .swiper ol li img{width: 100%;}
     .featuresArea .stepsArea .swiper .swiper-pagination{bottom: 0;}
     .featuresArea .stepsArea :is(.swiper-button-prev , .swiper-button-next){color: #999999;}
