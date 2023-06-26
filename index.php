@@ -1,3 +1,6 @@
+<?php
+require_once "/opt/lampp/htdocs/libs/projectLib.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -11,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/import.css">
     <script src="js/common.js"></script>
+    <script src="js/web.js"></script>
 </head>
 <body>
     <header>
@@ -43,7 +47,7 @@
                 Coming to iOS and Android.
             </p>
             <button data-popupOpen="popupArea">Request Invite</button>
-            <div class="popupArea active">
+            <div class="popupArea">
                 <div>
                     <div class="leftArea">
                         <img src="images/logo.png" alt="DIVING BUEDDY">
@@ -54,7 +58,7 @@
                         <p>Your personal data will be used to notify you of the release of the Diving Buddy app and to enhance your experience throughout this website.</p>
                     </div>
                     <div class="rightArea">
-                        <form>
+                        <form id="inviteForm" onsubmit="return false">
                             <fieldset>
                                 <ul>
                                     <li>
@@ -82,7 +86,7 @@
                                         <input type="email" placeholder="Enter your Email Address" name="email">
                                     </li>
                                 </ul>
-                                <input type="submit" value="Send">
+                                <input type="submit" value="Send" onclick="api('inviteForm')">
                                 <p>Your personal data will be used to notify you of the release of the Diving Buddy app and to enhance your experience throughout this website.</p>
                             </fieldset>
                         </form>
@@ -165,7 +169,7 @@
             <p>Diving Buddy has exciting plans for a free trial diving campaign, aiming to provide an unforgettable experience to 10,000 people in each city worldwide.</p>
             <p>We warmly invite all instructors, divers, and trainees to join us now in this exciting campaign to support you better</p>
             <p>The first city will be announced based on the country with the most participants after the official launch of the app. </p>
-            <p>Request an invite now! <a href="">Click or tap here</a></p>
+            <p>Request an invite now! <a href="javascript:return false;" data-popupOpen="popupArea">Click or tap here</a></p>
         </div>
     </div>
 

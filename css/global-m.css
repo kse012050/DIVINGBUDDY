@@ -10,7 +10,8 @@
     .popupArea > div .leftArea strong{display: block; font-size: 20px; line-height: 25px; color: white; font-weight: 600;}
     .popupArea > div .leftArea strong small{font-size: 15px; line-height: 30px; font-weight: 500; display: block;}
     .popupArea > div .leftArea p{display: none;}
-    .popupArea > div .rightArea{text-align: left; flex: 1; background-color: white; padding: 20px 30px; color: #0a0d13;}
+    .popupArea > div .rightArea{text-align: left; flex: 1; background-color: white; padding: 20px 30px; color: #0a0d13; display: flex; align-items: center; position: relative;}
+    .popupArea > div .rightArea.active{display: block;}
     .popupArea > div .rightArea fieldset ul li:not(:last-child){margin-bottom: 25px;}
     .popupArea > div .rightArea fieldset ul li strong{display: block; font-size: 12.5px; line-height: 15px; font-weight: 600; margin-bottom: 12px;}
     .popupArea > div .rightArea fieldset ul li input[type="radio"]{display: none;}
@@ -26,7 +27,7 @@
     .popupArea > div .rightArea fieldset ul li.select{position: relative;}
     .popupArea > div .rightArea fieldset ul li.select input[type="text"]{background-image: url('../images/icon-search.png'); background-repeat: no-repeat; background-position: right 14px center; background-size: 11px; cursor: pointer;}
     .popupArea > div .rightArea fieldset ul li.select input[type="text"][readonly]{background-image: url('../images/icon-down.png');}
-    .popupArea > div .rightArea fieldset ul li.select .countryList{display: none; position: absolute; left: 0; top: 100%; width: 100%; max-height: 263px; background-color: white; overflow: auto;}
+    .popupArea > div .rightArea fieldset ul li.select .countryList{display: none; position: absolute; left: 0; top: calc(100% + 15px); width: 100%; background-color: white; overflow: auto;}
     .popupArea > div .rightArea fieldset ul li.select .countryList.active{display: block;}
     .popupArea > div .rightArea fieldset ul li.select .countryList::-webkit-scrollbar{width: 2px;}
     .popupArea > div .rightArea fieldset ul li.select .countryList::-webkit-scrollbar-thumb{background-color: #2e9fff;}
@@ -36,7 +37,7 @@
     .popupArea > div > button{position: absolute; right: 25px; top: 15px; width: 42px; aspect-ratio: 1 / 1; background: url('../images/icon-close.png') no-repeat center / cover; text-indent: -9999px;}
 
     /* 해더  */
-    header{position: sticky; left: 0; top: 0; height: 80px; display: flex; justify-content: space-between; align-items: center; padding-inline: 20px; background-color: #1d262d; z-index: 100;}
+    header{position: fixed; left: 0; top: -1px; width: 100%; height: 80px; display: flex; justify-content: space-between; align-items: center; padding-inline: 20px; background-color: #1d262d; z-index: 100; box-sizing: border-box;}
     header h1{max-width: 150px;}
     header h1 img{width: 100%;}
     header button{width: 50px; height: 50px; background-image: url('../images/icon-menu.png'); background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}

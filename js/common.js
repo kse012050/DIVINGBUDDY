@@ -65,7 +65,7 @@ $(document).ready(function(){
         }
         if($(window).width() < mobileSize){
             let moveY = selectOffsetTop
-            if(idx >= 3){moveY = moveY - 100} /* 왜지..? */
+            if(idx == 4){moveY = $('[data-mobileScroll]').offset().top} /* 왜지..? */
             $('nav').removeClass('active')
             $('header button').removeClass('active')
             $('html').animate({scrollTop: moveY - $('header').height()})
@@ -102,9 +102,14 @@ $(document).ready(function(){
             // 국가 클릭시 리스트 
             $('.select input[type="text"][readonly]').click(function(e){
                 e.stopPropagation();
+                console.log(1);
                 $('.countryList').addClass('active');
+                $('.rightArea').addClass('active');
                 $(this).prop('readonly',false);
                 countriesList(countries)
+                // console.log($(window).height());
+                console.log($('.popupArea > div .rightArea').innerHeight() - $('.select').position().top - parseInt($('.countryList').css('top')))
+                $('.countryList').height($('.popupArea > div .rightArea').innerHeight() - $('.select').position().top - parseInt($('.countryList').css('top')))
             })
 
             // 팝업 안 클릭시 국가 리스트 제거
@@ -112,6 +117,7 @@ $(document).ready(function(){
                 e.stopPropagation();
                 if(!$('.countryList').hasClass('active')){return}
                 $('.countryList').removeClass('active');
+                $('.rightArea').removeClass('active');
                 $('.select input[type="text"]').prop('readonly',true);
                 let data = countries.filter((a) => a.name.common === $('.select input[type="text"]').val());
                 if(!data.length){
@@ -144,13 +150,18 @@ $(document).ready(function(){
 
         // 리스트 추가
         list.forEach(function(country , idx) {
-            $('.countryList').append(`<div><img src="${country.flags.png}" alt="${country.name.common}">${country.name.common}</div>`)
+            if(country.name.common === 'Afghanistan'){
+                $('.countryList').append(`<div><img src="./images/afghanistan.png">${country.name.common}</div>`)
+            }else{
+                $('.countryList').append(`<div><img src="${country.flags.png}" alt="${country.name.common}">${country.name.common}</div>`)
+            }
         });
 
         // 리스트 클릭시
         $('.countryList > div').click(function(e){
             e.stopPropagation();
             $('.countryList').removeClass('active')
+            $('.rightArea').removeClass('active')
             $('.select input[type="text"]').val($(this).text());
             $('.select input[type="text"]').prop('readonly',true);
         })
