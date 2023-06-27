@@ -1,4 +1,5 @@
 @media screen and (min-width: 750px) and (max-width: 1499px) {
+    br.mobile{display: none;}
     /* 팝업 */
     .popupArea{text-align: left; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 1000;}
     .popupArea.active{display: flex;}
@@ -9,7 +10,7 @@
     .popupArea > div .leftArea strong{font-size: 24px; color: white; font-weight: 600;}
     .popupArea > div .leftArea strong small{font-size: 15px; line-height: 30px; font-weight: 500; display: block; margin-bottom: 35px;}
     .popupArea > div .leftArea p{font-size: 14px; line-height: 24px; color: #acacac;}
-    .popupArea > div .rightArea{flex: 610; background-color: white; padding-inline: 4.8%; color: #0a0d13;}
+    .popupArea > div .rightArea{flex: 610; background-color: white; padding-inline: 4.8%; color: #0a0d13; position: relative;}
     .popupArea > div .rightArea fieldset ul li:not(:last-child){margin-bottom: 40px;}
     .popupArea > div .rightArea fieldset ul li strong{display: block; font-size: 20px; line-height: 24px; font-weight: 600; margin-bottom: 20px;}
     .popupArea > div .rightArea fieldset ul li input[type="radio"]{display: none;}

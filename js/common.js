@@ -1,4 +1,8 @@
-const mobileSize = 750;
+let mobileSize = 750;
+if (!(/Mobi|Android/i.test(navigator.userAgent))) {
+    // PC로 접속한 경우
+    mobileSize -= 17
+}
 $(document).ready(function(){
     // video 재생
     $('.videoArea button').click(function(){
@@ -107,7 +111,9 @@ $(document).ready(function(){
                 $('.rightArea').addClass('active');
                 $(this).prop('readonly',false);
                 countriesList(countries)
-                // console.log($(window).height());
+                console.log($('.popupArea > div .rightArea').innerHeight());
+                console.log($('.select').position().top);
+                console.log(parseInt($('.countryList').css('top')));
                 console.log($('.popupArea > div .rightArea').innerHeight() - $('.select').position().top - parseInt($('.countryList').css('top')))
                 $('.countryList').height($('.popupArea > div .rightArea').innerHeight() - $('.select').position().top - parseInt($('.countryList').css('top')))
             })
