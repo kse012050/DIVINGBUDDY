@@ -1,4 +1,4 @@
-@media screen and (min-width: 750px) and (max-width: 1499px) {
+@media screen and (min-width: 750px) and (max-width: 999px) {
     /* video. 영역 */
     .videoArea{position: relative; line-height: 0;}
     .videoArea video{width: 100%; height: calc(100vh - 66px); /* max-height: 950px; min-height: 600px; */ object-fit: cover;}
@@ -7,13 +7,13 @@
     .videoArea button.active{opacity: 1; pointer-events: all;}
 
     /* invite 영역 */
-    .inviteArea{/* height: 100vh; */ background: url('../images/inviteBG.png'); color: white; text-align: center;}
+    .inviteArea{/* height: 100vh; */ background: url('../images/test.gif') no-repeat center / cover; color: white; text-align: center;}
     .inviteArea > div{height: 100%; display: flex; flex-direction: column; align-items: center; padding-top: 70px; box-sizing: border-box;}
     .inviteArea > div::after{content: ''; width: 60%; min-width: 622px; aspect-ratio: 1275 / 454; margin-top: auto; background: url('../images/inviteImg.png') no-repeat center / cover; margin-top: 60px;}
-    .inviteArea > div > h2{font-size: 28px; line-height: 45px; margin-bottom: 45px;}
-    .inviteArea > div > p{font-size: 16px; line-height: 36px; max-width: 550px;}
-    .inviteArea > div > p:first-of-type{margin-bottom: 20px;}
-    .inviteArea > div > button{font-size: 13.5px; width: 205px; line-height: 56px; background-color: #1d262d; border-radius: 50px; margin-top: 90px; position: relative;}
+    .inviteArea > div > h2{font-size: 28px; line-height: 45px; margin-bottom: 40px;}
+    .inviteArea > div > p{font-size: 16px; line-height: 1.5; max-width: 550px;}
+    .inviteArea > div > p:first-of-type{margin-bottom: 10px;}
+    .inviteArea > div > button{font-size: 13.5px; width: 205px; line-height: 56px; background-color: #1d262d; border-radius: 50px; margin-top: 50px; position: relative;}
     .inviteArea > div > button::after{content: ''; position: absolute; inset: 5px; border: 2px solid #0071e3; border-radius: inherit;}
 
     /* features */
@@ -21,11 +21,12 @@
     .featuresArea > *{}
     .featuresArea :is(.stepsArea , .profilesArea){display: flex; /* min-height: 1080px; */}
     .featuresArea .stepsArea{flex-direction: column;}
-    .featuresArea > *:not(.freeArea) h2{font-size: 28px; color: #78879c; margin-bottom: 35px;}
-    .featuresArea > * p{font-size: 16px; line-height: 36px; color: rgba(29, 38, 45, 0.5);}
+    .featuresArea > *:not(.freeArea) h2{font-size: 28px; color: #78879c; margin-bottom: 40px;}
+    .featuresArea p{font-size: 16px; line-height: 1.5; color: rgba(29, 38, 45, 0.5);}
+    .featuresArea p:not(:last-of-type){margin-bottom: 10px;}
 
-    .featuresArea .stepsArea{width: calc(100% - 100px); justify-content: center; align-items: center; text-align: center; padding: 55px 0; margin: 0 auto;}
-    .featuresArea .stepsArea p:last-of-type{margin-bottom: 75px;}
+    .featuresArea .stepsArea{width: calc(100% - 100px); justify-content: center; align-items: center; text-align: center; padding-top: 70px; margin: 0 auto;}
+    .featuresArea .stepsArea p:last-of-type{margin-bottom: 50px;}
     .featuresArea .stepsArea > div{width: 100%;}
     .featuresArea .stepsArea > div > span{display: none;}
     .featuresArea .stepsArea > div .swiper{overflow: visible; width: 100%;}
@@ -41,47 +42,47 @@
     .featuresArea .stepsArea > div .swiper-button-prev{display: none;}
     .featuresArea .stepsArea > div .swiper-button-next{display: none;}
 
-    .featuresArea .profilesArea{align-items: center; flex-wrap: wrap; margin: 0 auto; padding: 55px 0;}
-    .featuresArea .profilesArea img{min-width: 360px; width: 34%; margin-right: 4.27%;}
-    .featuresArea .profilesArea figcaption{flex: 1; padding-right: 53px;}
+    .featuresArea .profilesArea{align-items: center; flex-wrap: wrap; width: calc(100% - 100px); margin: 0 auto; padding-top: 70px;}
+    .featuresArea .profilesArea img{min-width: 250px; width: 34%; margin-right: 50px;}
+    .featuresArea .profilesArea figcaption{flex: 1;}
     .featuresArea .profilesArea figcaption h2{line-height: 1.5;}
-    .featuresArea .profilesArea::after{content: ''; display: block;  width: 100%; aspect-ratio: 3 / 1.12; background: url('../images/features02-img02.png') no-repeat center / 38.87%; margin-top: 70px;}
+    .featuresArea .profilesArea::after{content: ''; display: block;  width: 100%; aspect-ratio: 3 / 1.12; background: url('../images/features02-img02.png') no-repeat center / 38.87%; margin-top: 50px;}
 
-    .featuresArea .chatArea{width: calc(100% - 100px); text-align: center; max-width: 800px; margin: 0 auto; padding: 55px 0;}
-    .featuresArea .chatArea::after{content: ''; display: block; width: 100%; aspect-ratio: 1958 / 1371; margin-top: 80px; background: url('../images/features03-img01.png') no-repeat center / cover;}
+    .featuresArea .chatArea{width: calc(100% - 100px); text-align: center; max-width: 800px; margin: 0 auto; padding-top: 70px;}
+    .featuresArea .chatArea::after{content: ''; display: block; width: 100%; max-width: 400px; aspect-ratio: 1958 / 1371; margin: 50px auto 0; background: url('../images/features03-img01.png') no-repeat center / cover;}
 
-    .featuresArea .signingArea{width: calc(100% - 100px); max-width: 800px; display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; padding: 55px 0;}
-    .featuresArea .signingArea div p:not(:last-of-type){margin-bottom: 40px;}
+    .featuresArea .signingArea{width: calc(100% - 100px); /* max-width: 800px; */ display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; padding: 70px 0;}
+    /* .featuresArea .signingArea div p:not(:last-of-type){margin-bottom: 40px;} */
     .featuresArea .signingArea img{width: 230px; margin-left: 6.8%;}
 
     .featuresArea .freeArea{max-width: 1920px; margin: 0 auto;}
     .featuresArea .freeArea > *{width: 86.5%; margin-left: auto;}
     .featuresArea .freeArea h2{font-size: 25px; line-height: 454px; text-align: center; color: white; background: url('../images/features05-BG.png') no-repeat center / cover; position: relative;}
     .featuresArea .freeArea h2::before{content: ''; position: absolute; left: -70px; top: 50%; transform: translateY(-50%); background: url('../images/features05-img.png') no-repeat center / cover; width: 176px; height: 393px;}
-    .featuresArea .freeArea p{padding: 20px 4.89% 80px 2.5%; color: rgba(29, 38, 45, 0.5); box-sizing: border-box;}
+    .featuresArea .freeArea p{padding: 40px 50px 70px 10px; color: rgba(29, 38, 45, 0.5); box-sizing: border-box;}
 
     /* campaign */
-    .campaignArea{--backgroundColor: #f5f6f8; padding: 60px 0; background-color: var(--backgroundColor); max-width: 1700px; margin: 0 auto; display: flex; align-items: center; box-shadow: 0 0 0 100vmax var(--backgroundColor); clip-path: inset(0 -100vmax);}
+    .campaignArea{--backgroundColor: #f5f6f8; width: calc(100% - 100px); padding: 70px 0; background-color: var(--backgroundColor); max-width: 1700px; margin: 0 auto; display: flex; align-items: center; box-shadow: 0 0 0 100vmax var(--backgroundColor); clip-path: inset(0 -100vmax);}
     .campaignArea div::before , .campaignArea div::after{content: ''; flex-shrink: 0; background-repeat: no-repeat; background-position: center; background-size: cover;}
     .campaignArea div{width: calc(100% - 100px); margin: 0 auto; position: relative;}
-    .campaignArea div::before{position: absolute; left: 0; top: 0; width: 200px; aspect-ratio: 1 / 1; background-image: url('../images/campaingImg01.png');}
-    .campaignArea div::after{position: absolute; right: 0; bottom: 0; width: 243px; aspect-ratio: 450 / 315; background-image: url('../images/campaingImg02.png');}
-    .campaignArea div p{font-size: 16px; line-height: 2.19; color: rgba(0, 0, 0, 0.5);}
-    .campaignArea div p:nth-child(-n + 2){padding-left: 250px;}
+    .campaignArea div::before{position: absolute; left: 0; top: -20px; width: 150px; aspect-ratio: 1 / 1; background-image: url('../images/campaingImg01.png');}
+    .campaignArea div::after{position: absolute; right: 0; bottom: -5px; width: 200px; aspect-ratio: 450 / 315; background-image: url('../images/campaingImg02.png');}
+    .campaignArea div p{font-size: 16px; line-height: 1.5; color: rgba(0, 0, 0, 0.5);}
+    .campaignArea div p:nth-child(-n + 2){padding-left: 200px;}
     .campaignArea div p:nth-child(n + 3){padding-right: 250px;}
-    .campaignArea div p:nth-child(2n + 1){margin-bottom: 18px;}
-    .campaignArea div p:nth-child(2){margin-bottom: 55px;}
+    .campaignArea div p:nth-child(2n + 1){margin-bottom: 10px;}
+    .campaignArea div p:nth-child(2){margin-bottom: 20px;}
     .campaignArea div p:nth-child(4){padding-bottom: 30px;}
     .campaignArea div p a{color: #2e9fff; font-weight: 500;}
 
     /* app */
-    .appArea{ width: calc(100% - 100px); margin: 0 auto; padding-block: 80px 100px; padding-right: 330px; box-sizing: border-box; position: relative;}
-    .appArea::after{content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 295px; aspect-ratio: 398.1 / 591.3; background: url('../images/appImg.png') no-repeat center / cover;}
-    .appArea h2{font-size: 25px; line-height: 40px; color: #78879c; margin-bottom: 40px;}
-    .appArea div{width: 135px; height: 45px; background: url('../images/icon-app.png') no-repeat center / cover;  margin: 0 auto 75px; position: relative;}
+    .appArea{ width: calc(100% - 100px); margin: 0 auto; padding-block: 110px; padding-right: 280px; box-sizing: border-box; position: relative;}
+    .appArea::after{content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 230px; aspect-ratio: 398.1 / 591.3; background: url('../images/appImg.png') no-repeat center / cover;}
+    .appArea h2{font-size: 25px; line-height: 1.2; color: #78879c; margin-bottom: 50px;}
+    .appArea div{width: 135px; height: 45px; background: url('../images/icon-app.png') no-repeat center / cover;  margin: 0 auto 50px; position: relative;}
     .appArea div a{position: absolute; top: 0; height: 100%; width: 94px; text-indent: -9999px;}
     .appArea div a:nth-child(1){left: 0;}
     .appArea div a:nth-child(2){right: 0;}
-    .appArea p{font-size: 16px; line-height: 2; color: rgba(29, 38, 45, 0.5);}
-    .appArea p:not(:last-of-type){margin-bottom: 20px;}
+    .appArea p{font-size: 16px; line-height: 1.5; color: rgba(29, 38, 45, 0.5);}
+    .appArea p:not(:last-of-type){margin-bottom: 10px;}
 }

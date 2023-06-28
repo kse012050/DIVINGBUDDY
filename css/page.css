@@ -1,4 +1,4 @@
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1000px) {
     /* video. 영역 */
     .videoArea{position: relative; line-height: 0;}
     .videoArea video{width: 100%; height: calc(100vh - 106px); /* max-height: 950px; min-height: 600px; */ object-fit: cover;}
@@ -7,12 +7,12 @@
     .videoArea button.active{opacity: 1; pointer-events: all;}
 
     /* invite 영역 */
-    .inviteArea{/* height: 100vh; */ background: url('../images/inviteBG.png'); color: white; text-align: center;}
+    .inviteArea{/* height: 100vh; */ background: url('../images/test.gif') no-repeat center / cover; color: white; text-align: center;}
     .inviteArea > div{height: 100%; display: flex; flex-direction: column; align-items: center; padding-top: 100px; box-sizing: border-box;}
     .inviteArea > div::after{content: ''; width: 66.4%; max-width: 1275px; aspect-ratio: 1275 / 454; margin-top: auto; background: url('../images/inviteImg.png') no-repeat center / cover;}
-    .inviteArea > div > h2{font-size: 40px;}
-    .inviteArea > div > p{font-size: 24px; line-height: 45px; max-width: 800px;}
-    .inviteArea > div > p:first-of-type{margin: 60px 0;}
+    .inviteArea > div > h2{font-size: 40px; margin-bottom: 50px;}
+    .inviteArea > div > p{font-size: 24px; line-height: 1.5; max-width: 800px;}
+    .inviteArea > div > p:first-of-type{margin-bottom: 20px;}
     .inviteArea > div > button{font-size: 17px; width: 256px; line-height: 70px; background-color: #1d262d; border-radius: 50px; margin-top: 30px; position: relative;}
     .inviteArea > div > button::after{content: ''; position: absolute; inset: 5px; border: 2px solid #0071e3; border-radius: inherit;}
 
@@ -20,11 +20,12 @@
     .featuresArea > *{}
     .featuresArea :is(.stepsArea , .profilesArea){display: flex; /* min-height: 1080px; */}
     .featuresArea .stepsArea{flex-direction: column;}
-    .featuresArea > *:not(.freeArea) h2{font-size: 40px; color: #78879c; margin-bottom: 30px;}
-    .featuresArea > * p{font-size: 20px; line-height: 2; color: rgba(29, 38, 45, 0.5);}
+    .featuresArea > *:not(.freeArea) h2{font-size: 40px; color: #78879c; line-height: 1.2; margin-bottom: 50px;}
+    .featuresArea p{font-size: 20px; line-height: 1.5; color: rgba(29, 38, 45, 0.5);}
+    .featuresArea p:not(:last-of-type){margin-bottom: 20px;}
 
-    .featuresArea .stepsArea{width: calc(100% - 100px); justify-content: center; align-items: center; text-align: center; padding: 120px 0; margin: 0 auto;}
-    .featuresArea .stepsArea p:last-of-type{margin-bottom: 150px;}
+    .featuresArea .stepsArea{max-width: 1500px; width: calc(100% - 150px); justify-content: center; align-items: center; text-align: center; padding-top: 100px; margin: 0 auto;}
+    .featuresArea .stepsArea p:last-of-type{margin-bottom: 50px;}
     .featuresArea .stepsArea > div > span{display: none;}
     .featuresArea .stepsArea > div .swiper{overflow: visible; width: 100%; max-width: 1650px;}
     .featuresArea .stepsArea > div .swiper ol{display: flex; justify-content: center; gap: 11%;  margin: 0 auto;}
@@ -38,43 +39,66 @@
     .featuresArea .stepsArea > div .swiper-button-prev{display: none;}
     .featuresArea .stepsArea > div .swiper-button-next{display: none;}
 
-    .featuresArea .profilesArea{align-items: center; width: calc(100% - 120px); margin: 0 auto; padding: 110px 0;}
-    .featuresArea .profilesArea img{max-width: 604px; width: 33.55%; margin-right: 4.27%;}
+    .featuresArea .profilesArea{max-width: 1500px; align-items: center; width: calc(100% - 150px); margin: 0 auto; padding-top: 110px;}
+    .featuresArea .profilesArea img{flex-shrink: 0; max-width: 604px; width: 33.55%; min-width: 300px; margin-right: 50px;}
     .featuresArea .profilesArea figcaption{padding-right: 90px;}
-    .featuresArea .profilesArea figcaption h2{line-height: 1.5;}
-    .featuresArea .profilesArea figcaption::after{content: ''; display: block; width: 49%; aspect-ratio: 550 / 526; background: url('../images/features02-img02.png') no-repeat center / cover; margin: 70px auto 0;}
+    /* .featuresArea .profilesArea figcaption h2{line-height: 1.5;} */
+    .featuresArea .profilesArea figcaption::after{content: ''; display: block; min-width: 300px; width: 49%; aspect-ratio: 550 / 526; background: url('../images/features02-img02.png') no-repeat center / cover; margin: 50px auto 0;}
 
-    .featuresArea .chatArea{text-align: center; max-width: 1000px; margin: 0 auto; padding-top: 120px;}
-    .featuresArea .chatArea::after{content: ''; display: block; width: 100%; aspect-ratio: 1958 / 1371; margin-top: 140px; background: url('../images/features03-img01.png') no-repeat center / cover;}
+    .featuresArea .chatArea{text-align: center; max-width: 1000px; width: calc(100% - 150px); margin: 0 auto; padding-top: 100px;}
+    .featuresArea .chatArea::after{content: ''; display: block; width: 100%; aspect-ratio: 1958 / 1371; margin-top: 50px; background: url('../images/features03-img01.png') no-repeat center / cover;}
 
-    .featuresArea .signingArea{display: flex; justify-content: space-between; align-items: center; width: calc(100% - 100px); max-width: 1400px; margin: 0 auto; padding: 180px 0;}
+    .featuresArea .signingArea{display: flex; justify-content: space-between; align-items: center; width: calc(100% - 150px); max-width: 1200px; margin: 0 auto; padding: 100px 0;}
     .featuresArea .signingArea div p:not(:last-of-type){margin-bottom: 40px;}
-    .featuresArea .signingArea img{width: 375px; margin-left: 14%;}
+    .featuresArea .signingArea img{width: 375px; margin-left: 50px;}
 
-    .featuresArea .freeArea{max-width: 1920px; margin: 0 auto;}
+    .featuresArea .freeArea{max-width: 1920px; margin: 0 auto 100px;}
     .featuresArea .freeArea > *{width: 86.5%; margin-left: auto;}
-    .featuresArea .freeArea h2{font-size: 48px; line-height: 875px; text-align: center; color: white; background: url('../images/features05-BG.png') no-repeat center / cover; position: relative;}
-    .featuresArea .freeArea h2::before{content: ''; position: absolute; left: -149px; top: 50%; transform: translateY(-50%); background: url('../images/features05-img.png') no-repeat center / cover; width: 340.7px; height: 740px;}
-    .featuresArea .freeArea p{padding: 42px 4.89% 85px 2.5%; box-sizing: border-box;}
+    .featuresArea .freeArea h2{font-size: 48px; line-height: 875px; text-align: center; color: white; background: url('../images/features05-BG.png') no-repeat center / cover; position: relative; margin-bottom: 50px;}
+    .featuresArea .freeArea h2::before{content: ''; position: absolute; left: -149px; top: 50%; transform: translateY(-50%); background: url('../images/features05-img.png') no-repeat center / cover; width: 340.7px; aspect-ratio: 340.7 / 740;}
+    .featuresArea .freeArea p{padding: 0 4.89% 0 2.5%; box-sizing: border-box;}
+    @media screen and (max-width: 1299px) {
+        .featuresArea .freeArea > *{width: calc(100% - 300px);}
+        .featuresArea .freeArea h2::before{width: 300px; left: -265px;}
+        .featuresArea .freeArea p{width: auto; padding: 0; width: calc(100% - 150px); margin: 0 auto;}
+    }
 
     /* campaign */
-    .campaignArea{--backgroundColor: #f5f6f8; padding: 85px 0; background-color: var(--backgroundColor); width: calc(100% - 100px); max-width: 1700px; margin: 0 auto; display: flex; align-items: center; box-shadow: 0 0 0 100vmax var(--backgroundColor); clip-path: inset(0 -100vmax);}
-    .campaignArea::before , .campaignArea::after{content: ''; flex-shrink: 0; background-repeat: no-repeat; background-position: center; background-size: cover;}
-    .campaignArea::before{ width: 330px; aspect-ratio: 1 / 1; background-image: url('../images/campaingImg01.png');}
-    .campaignArea::after{ width: 450px; aspect-ratio: 450 / 315; background-image: url('../images/campaingImg02.png');}
-    .campaignArea div{margin: 0 45px;}
-    .campaignArea div p{font-size: 20px; line-height: 35px; color: rgba(0, 0, 0, 0.5);}
-    .campaignArea div p:not(:last-child){margin-bottom: 35px;}
-    .campaignArea div p a{color: #2e9fff; font-weight: 500;}
+    @media screen and (min-width: 1300px) {
+        .campaignArea{--backgroundColor: #f5f6f8; padding: 100px 0; background-color: var(--backgroundColor); width: calc(100% - 150px); max-width: 1500px; margin: 0 auto; display: flex; align-items: center; box-shadow: 0 0 0 100vmax var(--backgroundColor); clip-path: inset(0 -100vmax);}
+        .campaignArea::before , .campaignArea::after{content: ''; flex-shrink: 0; background-repeat: no-repeat; background-position: center; background-size: cover;}
+        .campaignArea::before{ width: 20%; aspect-ratio: 1 / 1; background-image: url('../images/campaingImg01.png');}
+        .campaignArea::after{ width: 25%; aspect-ratio: 450 / 315; background-image: url('../images/campaingImg02.png');}
+        .campaignArea div{margin: 0 50px;}
+        .campaignArea div p{font-size: 20px; line-height: 35px; color: rgba(0, 0, 0, 0.5);}
+        .campaignArea div p:not(:last-child){margin-bottom: 20px;}
+        .campaignArea div p a{color: #2e9fff; font-weight: 500;}
+    }
+    @media screen and (max-width: 1299px) {
+        .campaignArea{--backgroundColor: #f5f6f8; padding: 100px 0; width: calc(100% - 150px); background-color: var(--backgroundColor); max-width: 1700px; margin: 0 auto; display: flex; align-items: center; box-shadow: 0 0 0 100vmax var(--backgroundColor); clip-path: inset(0 -100vmax);}
+        .campaignArea div::before , .campaignArea div::after{content: ''; flex-shrink: 0; background-repeat: no-repeat; background-position: center; background-size: cover;}
+        .campaignArea div{width: calc(100% - 100px); margin: 0 auto; position: relative;}
+        .campaignArea div::before{position: absolute; left: 0; top: -30px; width: 150px; aspect-ratio: 1 / 1; background-image: url('../images/campaingImg01.png');}
+        .campaignArea div::after{position: absolute; right: 0; bottom: -70px; width: 250px; aspect-ratio: 450 / 315; background-image: url('../images/campaingImg02.png');}
+        .campaignArea div p{font-size: 16px; line-height: 1.5; color: rgba(0, 0, 0, 0.5);}
+        .campaignArea div p:not(:last-of-type){margin-bottom: 20px;}
+        .campaignArea div p:nth-child(-n + 2){padding-left: 200px;}
+        .campaignArea div p:nth-child(n + 3){padding-right: 300px;}
+        .campaignArea div p:nth-child(2){margin-bottom: 40px;}
+        /* .campaignArea div p:nth-child(2n + 1){margin-bottom: 18px;}
+        .campaignArea div p:nth-child(2){margin-bottom: 55px;}
+        .campaignArea div p:nth-child(4){padding-bottom: 30px;} */
+        .campaignArea div p a{color: #2e9fff; font-weight: 500;}
+    }
 
     /* app */
-    .appArea{width: calc(100% - 100px); max-width: 1400px; margin: 0 auto; padding-block: 250px; padding-right: 500px; box-sizing: border-box; position: relative;}
-    .appArea::after{content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 28.5%; aspect-ratio: 398.1 / 591.3; background: url('../images/appImg.png') no-repeat center / cover;}
-    .appArea h2{font-size: 40px; color: #78879c; margin-bottom: 75px;}
-    .appArea div{width: 203px; height: 68px; background: url('../images/icon-app.png') no-repeat center / cover;  margin: 0 auto 75px; position: relative;}
+    .appArea{width: calc(100% - 150px); max-width: 1500px; margin: 0 auto; padding-block: 200px; padding-right: 475px; box-sizing: border-box; position: relative;}
+    .appArea::after{content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 425px; aspect-ratio: 398.1 / 591.3; background: url('../images/appImg.png') no-repeat center / cover;}
+    .appArea h2{font-size: 40px; color: #78879c; line-height: 1.2; margin-bottom: 50px;}
+    .appArea div{width: 203px; height: 68px; background: url('../images/icon-app.png') no-repeat center / cover;  margin: 0 auto 50px; position: relative;}
     .appArea div a{position: absolute; top: 0; height: 100%; width: 94px; text-indent: -9999px;}
     .appArea div a:nth-child(1){left: 0;}
     .appArea div a:nth-child(2){right: 0;}
-    .appArea p{font-size: 20px; line-height: 2; color: rgba(29, 38, 45, 0.5);}
+    .appArea p{font-size: 20px; line-height: 1.5; color: rgba(29, 38, 45, 0.5);}
     .appArea p:not(:last-of-type){margin-bottom: 20px;}
 }
