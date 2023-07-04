@@ -184,7 +184,7 @@ require_once "/opt/lampp/htdocs/libs/projectLib.php";
     </section>
 
     <footer>
-        © <img src="images/logo.png" alt="BIVING BUDDY"> All Rights Reserved.
+        <mark>© diving Buddy All Rights Reserved.</mark> Email: hey@divingbuddy.io
     </footer>
 </body>
 </html>

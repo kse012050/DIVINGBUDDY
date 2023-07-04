@@ -154,8 +154,10 @@ $(document).ready(function(){
         list.forEach(function(country , idx) {
             if(country.name.common === 'Afghanistan'){
                 $('.countryList').append(`<div><img src="./images/afghanistan.png">${country.name.common}</div>`)
+                // $('.countryList').append(`<div>${country.name.common}</div>`)
             }else{
                 $('.countryList').append(`<div><img src="${country.flags.png}" alt="${country.name.common}">${country.name.common}</div>`)
+                // $('.countryList').append(`<div>${country.name.common}</div>`)
             }
         });
 
@@ -216,7 +218,7 @@ function sliderResize(){
             $(this).addClass('slider0' + (i + 1))
         })
         swiper = new Swiper('.swiper', {
-            loop: true,
+            // loop: true,
             pagination: {
                 el: '.swiper-pagination',
             },

@@ -1,4 +1,4 @@
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1500px) {
     /* video. 영역 */
     .videoArea{position: relative; line-height: 0;}
     .videoArea video{width: 100%; height: calc(100vh - 106px); /* max-height: 950px; min-height: 600px; */ object-fit: cover;}
@@ -7,11 +7,12 @@
     .videoArea button.active{opacity: 1; pointer-events: all;}
 
     /* invite 영역 */
-    .inviteArea{/* height: 100vh; */ background: url('../images/test.gif') no-repeat center / cover; color: white; text-align: center;}
-    .inviteArea > div{height: 100%; display: flex; flex-direction: column; align-items: center; padding-top: 100px; box-sizing: border-box;}
-    .inviteArea > div::after{content: ''; width: 66.4%; max-width: 1275px; aspect-ratio: 1275 / 454; margin-top: auto; background: url('../images/inviteImg.png') no-repeat center / cover;}
+    .inviteArea{/* height: 100vh; */ background: url('../images/test.gif') no-repeat center / cover; color: white; text-align: center; position: relative;}
+    .inviteArea::before{content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(46, 159, 255, 0.87);}
+    .inviteArea > div{height: 100%; display: flex; flex-direction: column; align-items: center; padding-top: 100px; box-sizing: border-box; position: relative;}
+    .inviteArea > div::after{content: ''; width: 66.4%; max-width: 1275px; aspect-ratio: 1275 / 454; margin-top: auto; background: url('../images/inviteImg.png') no-repeat center / cover; margin-top: 70px;}
     .inviteArea > div > h2{font-size: 40px; margin-bottom: 50px;}
-    .inviteArea > div > p{font-size: 24px; line-height: 1.5; max-width: 800px;}
+    .inviteArea > div > p{font-size: 24px; font-size: 1.25vw; line-height: 1.5; max-width: 800px;}
     .inviteArea > div > p:first-of-type{margin-bottom: 20px;}
     .inviteArea > div > button{font-size: 17px; width: 256px; line-height: 70px; background-color: #1d262d; border-radius: 50px; margin-top: 30px; position: relative;}
     .inviteArea > div > button::after{content: ''; position: absolute; inset: 5px; border: 2px solid #0071e3; border-radius: inherit;}

@@ -49,6 +49,6 @@
     header nav ul li:not(:last-child){margin-bottom: 36px;}
 
     /* 푸터 */
-    footer{padding: 39px 0; background-color: #1c1f28; font-size: 11px; color: white; text-align: center;}
-    footer img{height: 7px;}
+    footer{padding: 35px 0; background-color: #1c1f28; font-size: 10px; color: white; text-align: center;}
+    footer mark{color: #2E9FFF;}
 }
