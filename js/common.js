@@ -106,13 +106,17 @@ $(document).ready(function(){
             // 국가 클릭시 리스트 
             $('.select input[type="text"][readonly]').click(function(e){
                 e.stopPropagation();
-                console.log(1);
                 $('.countryList').addClass('active');
                 $('.rightArea').addClass('active');
                 $(this).prop('readonly',false);
                 countriesList(countries)
                 $('.countryList').height($('.popupArea > div .rightArea').innerHeight() - $('.select').position().top - parseInt($('.countryList').css('top')))
             })
+
+            /* $('.select button').click(function(e){
+                e.preventDefault();
+                $('.select input[type="text"]').focus()
+            }) */
 
             // 팝업 안 클릭시 국가 리스트 제거
             $('.popupArea > div').click(function(e){
@@ -188,10 +192,12 @@ $(document).ready(function(){
     sliderResize();
     // 비디오 썸네일
     videoThum()
+    mobileHeight()
     // 리사이징 슬라이더
     $(window).resize(function(){
         sliderResize();
         videoThum();
+        mobileHeight()
     })
 
 })
@@ -234,3 +240,8 @@ function sliderResize(){
     }
 }
 
+
+function mobileHeight(){
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+}

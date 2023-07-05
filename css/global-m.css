@@ -1,7 +1,7 @@
 @media screen and (max-width: 749px) {
     body:has(nav.active){overflow: hidden;}
     /* 팝업 */
-    .popupArea{ position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 1000;}
+    .popupArea{ position: fixed; left: 0; top: 0; width: 100%; height: 100%; max-height: calc(var(--vh, 1vh) * 100); background-color: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 1000;}
     .popupArea.active{display: flex;}
     .popupArea > div{width: 100%; height: 100%; display: flex; flex-direction: column; position: relative;}
     /* .popupArea > div > div{display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;} */
@@ -10,7 +10,7 @@
     .popupArea > div .leftArea strong{display: block; font-size: 20px; line-height: 25px; color: white; font-weight: 600;}
     .popupArea > div .leftArea strong small{font-size: 15px; line-height: 30px; font-weight: 500; display: block;}
     .popupArea > div .leftArea p{display: none;}
-    .popupArea > div .rightArea{text-align: left; flex: 1; background-color: white; padding: 20px 30px; color: #0a0d13; display: flex; align-items: center; position: relative;}
+    .popupArea > div .rightArea{text-align: left; flex: 1; background-color: white; padding: 20px 30px; color: #0a0d13; display: flex; align-items: center; position: relative; overflow: auto;}
     .popupArea > div .rightArea.active{display: block;}
     .popupArea > div .rightArea fieldset ul li:not(:last-child){margin-bottom: 25px;}
     .popupArea > div .rightArea fieldset ul li strong{display: block; font-size: 12.5px; line-height: 15px; font-weight: 600; margin-bottom: 12px;}
@@ -27,6 +27,8 @@
     .popupArea > div .rightArea fieldset ul li.select{position: relative;}
     .popupArea > div .rightArea fieldset ul li.select input[type="text"]{background-image: url('../images/icon-search.png'); background-repeat: no-repeat; background-position: right 14px center; background-size: 11px; cursor: pointer;}
     .popupArea > div .rightArea fieldset ul li.select input[type="text"][readonly]{background-image: url('../images/icon-down.png');}
+    .popupArea > div .rightArea fieldset ul li.select button{display: none; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 21px; aspect-ratio: 1 / 1;}
+    .popupArea > div .rightArea fieldset ul li.select button.active{display: block;}
     .popupArea > div .rightArea fieldset ul li.select .countryList{display: none; position: absolute; left: 0; top: calc(100% + 15px); width: 100%; background-color: white; overflow: auto;}
     .popupArea > div .rightArea fieldset ul li.select .countryList.active{display: block;}
     .popupArea > div .rightArea fieldset ul li.select .countryList::-webkit-scrollbar{/* width: 2px; */ display: none;}
@@ -49,6 +51,6 @@
     header nav ul li:not(:last-child){margin-bottom: 36px;}
 
     /* 푸터 */
-    footer{padding: 35px 0; background-color: #1c1f28; font-size: 10px; color: white; text-align: center;}
+    footer{padding: 35px 0; background-color: #1c1f28; font-size: 10px; color: white; text-align: center; text-transform: uppercase;}
     footer mark{color: #2E9FFF;}
 }
