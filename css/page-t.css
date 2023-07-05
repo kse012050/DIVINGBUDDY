@@ -1,4 +1,4 @@
-@media screen and (min-width: 750px) and (max-width: 1499px) {
+@media screen and (min-width: 750px) /* and (max-width: 1499px) */ {
     /* video. 영역 */
     .videoArea{position: relative; line-height: 0;}
     .videoArea video{width: 100%; height: calc(100vh - 66px); /* max-height: 950px; min-height: 600px; */ object-fit: cover;}
@@ -43,7 +43,7 @@
     .featuresArea .stepsArea > div .swiper-button-prev{display: none;}
     .featuresArea .stepsArea > div .swiper-button-next{display: none;}
 
-    .featuresArea .profilesArea{max-width: 1500px; align-items: center; flex-wrap: wrap; width: calc(100% - 100px); margin: 0 auto; padding-top: 70px;}
+    .featuresArea .profilesArea{max-width: 1150px; align-items: center; flex-wrap: wrap; width: calc(100% - 100px); margin: 0 auto; padding-top: 70px;}
     .featuresArea .profilesArea img{width: 300px; margin-right: 50px;}
     .featuresArea .profilesArea figcaption{flex: 1;}
     .featuresArea .profilesArea figcaption h2{line-height: 1.5;}
