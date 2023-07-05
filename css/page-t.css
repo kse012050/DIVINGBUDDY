@@ -24,7 +24,7 @@
     .featuresArea .stepsArea{flex-direction: column;}
     .featuresArea > *:not(.freeArea) h2{font-size: 28px; color: #78879c; margin-bottom: 40px;}
     .featuresArea p{font-size: 16px; line-height: 1.5; color: rgba(29, 38, 45, 0.5);}
-    .featuresArea p:not(:last-of-type){margin-bottom: 0px;}
+    .featuresArea p:not(:last-of-type){margin-bottom: 20px;}
 
     .featuresArea .stepsArea{max-width: 1500px; width: calc(100% - 100px); justify-content: center; align-items: center; text-align: center; padding-top: 70px; margin: 0 auto;}
     .featuresArea .stepsArea p:last-of-type{margin-bottom: 50px;}
@@ -50,9 +50,10 @@
     .featuresArea .profilesArea::after{content: ''; display: block; width: 100%; height: 300px; background: url('../images/features02-img02.png') no-repeat center / 300px;}
 
     .featuresArea .chatArea{width: calc(100% - 100px); text-align: center; max-width: 800px; margin: 0 auto; padding-top: 70px;}
-    .featuresArea .chatArea::after{content: ''; display: block; width: 100%; max-width: 400px; aspect-ratio: 1958 / 1371; margin: 50px auto 0; background: url('../images/features03-img01.png') no-repeat center / cover;}
+    .featuresArea .chatArea::after{content: ''; display: block; width: 100%; max-width: 600px; aspect-ratio: 1958 / 1371; margin: 50px auto 0; background: url('../images/features03-img01.png') no-repeat center / cover;}
 
-    .featuresArea .signingArea{width: calc(100% - 100px); /* max-width: 800px; */ display: flex; justify-content: space-between; align-items: center; max-width: 1500px; margin: 0 auto; padding: 70px 0;}
+    .featuresArea .signingArea{width: calc(100% - 100px); display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; padding: 70px 0;}
+    .featuresArea .signingArea div{max-width: 550px;}
     /* .featuresArea .signingArea div p:not(:last-of-type){margin-bottom: 40px;} */
     .featuresArea .signingArea img{width: 300px; margin-left: 50px;}
 
@@ -99,10 +100,10 @@
     .appArea{max-width: 1500px; width: calc(100% - 100px); margin: 0 auto; padding-block: 110px; padding-right: 350px; box-sizing: border-box; position: relative;}
     .appArea::after{content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 300px; aspect-ratio: 398.1 / 591.3; background: url('../images/appImg.png') no-repeat center / cover;}
     .appArea h2{font-size: 25px; line-height: 1.2; color: #78879c; margin-bottom: 50px;}
-    .appArea div{width: 135px; height: 45px; background: url('../images/icon-app.png') no-repeat center / cover;  margin: 0 auto 50px; position: relative;}
-    .appArea div a{position: absolute; top: 0; height: 100%; width: 94px; text-indent: -9999px;}
-    .appArea div a:nth-child(1){left: 0;}
-    .appArea div a:nth-child(2){right: 0;}
+    .appArea div{max-width: 458px; width: 100%; height: 45px; background: url('../images/icon-app.png') no-repeat center / auto 100%;  margin-bottom: 50px; position: relative;}
+    .appArea div a{position: absolute; top: 0; left: 50%; height: 100%; width: 70px; text-indent: -9999px;}
+    .appArea div a:nth-child(1){transform: translateX(-100%);}
+    /* .appArea div a:nth-child(2){transform: translateX(50px);} */
     .appArea p{font-size: 16px; line-height: 1.5; color: rgba(29, 38, 45, 0.5);}
     .appArea p:not(:last-of-type){margin-bottom: 10px;}
 }
