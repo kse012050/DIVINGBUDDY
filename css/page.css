@@ -100,5 +100,6 @@
     .appArea div a{position: absolute; top: 0; left: 50%; height: 100%; width: 100px; text-indent: -9999px;}
     .appArea div a:nth-child(1){transform: translateX(-100%);}
     .appArea p{font-size: 20px; line-height: 1.5; color: rgba(29, 38, 45, 0.5);}
+    .appArea p span{display: block;}
     .appArea p:not(:last-of-type){margin-bottom: 20px;}
 }

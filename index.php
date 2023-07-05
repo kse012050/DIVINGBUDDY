@@ -141,9 +141,7 @@ require_once "/opt/lampp/htdocs/libs/projectLib.php";
         <section class="chatArea">
             <h2>1:1 and group chat conversations</h2>
             <p>
-                1:1 conversations start when users choose to 'Like' each other or by using the 'Super-Like' feature. 
-            </p>
-            <p>
+                1:1 conversations start when users choose to 'Like' each other or by using the 'Super-Like' feature.<br>
                 Additionally, a group chat room can be created by inviting buddies from an existing matching list.
             </p>
         </section>

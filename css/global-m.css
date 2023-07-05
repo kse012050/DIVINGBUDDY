@@ -17,7 +17,7 @@
     .popupArea > div .rightArea fieldset ul li input[type="radio"]{display: none;}
     .popupArea > div .rightArea fieldset ul li input[type="radio"] + label{display: inline-flex; align-items: center; font-size: 12.5px; font-weight: 500; line-height: 15px; color: #979797; cursor: pointer;}
     .popupArea > div .rightArea fieldset ul li input[type="radio"] + label:not(:last-of-type){margin-right: 20px;}
-    .popupArea > div .rightArea fieldset ul li input[type="radio"] + label::before{content: ''; width: 14px; height: 14px; background-image: url('../images/icon-radio.png'); background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 5px;}
+    .popupArea > div .rightArea fieldset ul li input[type="radio"] + label::before{content: ''; width: 14px; aspect-ratio: 1 / 1; background-image: url('../images/icon-radio.png'); background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 5px;}
     .popupArea > div .rightArea fieldset ul li input[type="radio"]:checked + label{color: #0a0d13;}
     .popupArea > div .rightArea fieldset ul li input[type="radio"]:checked + label::before{background-image: url('../images/icon-radio-check.png');}
     .popupArea > div .rightArea fieldset ul li input:is([type="text"] , [type="email"]){width: 100%; height: 30px; font-size: 10px; padding-inline: 14px; box-sizing: border-box; border: 2px solid #979797; border-radius: 5px;}
