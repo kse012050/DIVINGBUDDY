@@ -78,7 +78,7 @@ require_once "/opt/lampp/htdocs/libs/projectLib.php";
                                         <label for="trainee">Trainee</label>
                                     </li>
                                     <li class="select">
-                                        <input type="text" placeholder="Select Conutry" readonly name="country">
+                                        <input type="text" placeholder="Select Conutry" name="country">
                                         <div class="countryList">
                                         </div>
                                     </li>

@@ -83,13 +83,16 @@ $(document).ready(function(){
     // 팝업 열기
     $('[data-popupOpen]').click(function(){
         $('.'+$(this).attr('data-popupOpen')).addClass('active');
+        $('body').css('overflow','hidden')
     })
     // 팝업 닫기
     $('[data-popupClose]').click(function(){
         $('.'+$(this).attr('data-popupClose')).removeClass('active');
+        $('body').removeAttr('style')
     })
     $('.popupArea').click(function(){
         $(this).removeClass('active');
+        $('body').removeAttr('style')
     })
 
     var countriesAPI = 'https://restcountries.com/v3.1/all';
@@ -104,19 +107,13 @@ $(document).ready(function(){
             countriesList(countries)
         
             // 국가 클릭시 리스트 
-            $('.select input[type="text"][readonly]').click(function(e){
+            $('.select input[type="text"]').click(function(e){
                 e.stopPropagation();
                 $('.countryList').addClass('active');
                 $('.rightArea').addClass('active');
-                $(this).prop('readonly',false);
                 countriesList(countries)
                 $('.countryList').height($('.popupArea > div .rightArea').innerHeight() - $('.select').position().top - parseInt($('.countryList').css('top')))
             })
-
-            /* $('.select button').click(function(e){
-                e.preventDefault();
-                $('.select input[type="text"]').focus()
-            }) */
 
             // 팝업 안 클릭시 국가 리스트 제거
             $('.popupArea > div').click(function(e){
@@ -124,8 +121,7 @@ $(document).ready(function(){
                 if(!$('.countryList').hasClass('active')){return}
                 $('.countryList').removeClass('active');
                 $('.rightArea').removeClass('active');
-                $('.select input[type="text"]').prop('readonly',true);
-                let data = countries.filter((a) => a.name.common === $('.select input[type="text"]').val());
+                let data = countries.filter((a) => a.name.common === $('.select input[type="text"]').val().trim());
                 if(!data.length){
                     $('.select input[type="text"]').val('')
                 }
@@ -135,7 +131,7 @@ $(document).ready(function(){
             $('.select input[type="text"]').on('input',function(){
                 let data;
                 if($(this).val()){
-                    data = countries.filter((a) => a.name.common.toLowerCase().includes($(this).val().toLowerCase()))
+                    data = countries.filter((a) => a.name.common.toLowerCase().includes($(this).val().trim().toLowerCase()))
                 } else {
                     data = countries;
                 }

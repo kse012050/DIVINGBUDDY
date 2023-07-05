@@ -29,8 +29,8 @@
     .popupArea > div .rightArea fieldset ul li.select button{display: none;}
     .popupArea > div .rightArea fieldset ul li.select .countryList{display: none; position: absolute; left: 0; top: calc(100% + 15px); width: 100%; max-height: 263px; background-color: white; overflow: auto;}
     .popupArea > div .rightArea fieldset ul li.select .countryList.active{display: block;}
-    .popupArea > div .rightArea fieldset ul li.select .countryList::-webkit-scrollbar{/* width: 2px; */ display: none;}
-    .popupArea > div .rightArea fieldset ul li.select .countryList::-webkit-scrollbar-thumb{background-color: #2e9fff;}
+    /* .popupArea > div .rightArea fieldset ul li.select .countryList::-webkit-scrollbar{width: 2px; display: none;}
+    .popupArea > div .rightArea fieldset ul li.select .countryList::-webkit-scrollbar-thumb{background-color: #2e9fff;} */
     .popupArea > div .rightArea fieldset ul li.select .countryList div{display: flex; align-items: center; font-size: 15px; color: #8e8e8e; padding-block: 7.5px; cursor: pointer;}
     .popupArea > div .rightArea fieldset ul li.select .countryList div:hover{background-color: #a1d4fc; color: #0a0d13; font-weight: 500;}
     .popupArea > div .rightArea fieldset ul li.select .countryList div img{width: 50px; margin-right: 20px;}
