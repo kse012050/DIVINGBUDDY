@@ -36,13 +36,13 @@
     .popupArea > div .rightArea fieldset ul li.select .countryList div{display: flex; align-items: center; font-size: 10px; color: #8e8e8e; padding-block: 7.5px; cursor: pointer;}
     .popupArea > div .rightArea fieldset ul li.select .countryList div:hover{background-color: #a1d4fc; color: #0a0d13; font-weight: 500;}
     .popupArea > div .rightArea fieldset ul li.select .countryList div img{width: 35px; margin-right: 10px;}
-    .popupArea > div > button{position: absolute; right: 25px; top: 15px; width: 42px; aspect-ratio: 1 / 1; background: url('../images/icon-close.png') no-repeat center / cover; text-indent: -9999px;}
+    .popupArea > div > button{position: absolute; right: 25px; top: 15px; width: 26px; aspect-ratio: 1 / 1; background: url('../images/icon-close.png') no-repeat center / cover; text-indent: -9999px;}
 
     /* 해더  */
     header{position: fixed; left: 0; top: -1px; width: 100%; height: 80px; display: flex; justify-content: space-between; align-items: center; padding-inline: 20px; background-color: #1d262d; z-index: 100; box-sizing: border-box;}
     header h1{max-width: 150px;}
     header h1 img{width: 100%;}
-    header button{width: 50px; height: 50px; background-image: url('../images/icon-menu.png'); background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}
+    header button{width: 50px; height: 51px; background-image: url('../images/icon-menu.png'); background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}
     header button.active{background-image: url('../images/nav-close.png'); position: relative; z-index: 1;}
     header nav{position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: none; background-color: rgba(0, 0, 0, 0.5); box-sizing: border-box;}
     header nav.active{display: flex;}
@@ -51,6 +51,6 @@
     header nav ul li:not(:last-child){margin-bottom: 36px;}
 
     /* 푸터 */
-    footer{padding: 35px 0; background-color: #1c1f28; font-size: 10px; color: white; text-align: center; text-transform: uppercase;}
-    footer mark{color: #2E9FFF;}
+    footer{padding: 35px 0; background-color: #1c1f28; font-size: 10px; line-height: 16px; color: white; text-align: center; text-transform: uppercase;}
+    footer mark{display: block; color: #2E9FFF;}
 }

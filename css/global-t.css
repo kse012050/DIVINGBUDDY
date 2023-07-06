@@ -35,7 +35,7 @@ body:has(.popupArea.active){overflow: hidden;}
     .popupArea > div .rightArea fieldset ul li.select .countryList div{display: flex; align-items: center; font-size: 15px; color: #8e8e8e; padding-block: 7.5px; cursor: pointer;}
     .popupArea > div .rightArea fieldset ul li.select .countryList div:hover{background-color: #a1d4fc; color: #0a0d13; font-weight: 500;}
     .popupArea > div .rightArea fieldset ul li.select .countryList div img{width: 50px; margin-right: 20px;}
-    .popupArea > div > button{position: absolute; right: 25px; top: 25px; width: 50px; aspect-ratio: 1 / 1; background: url('../images/icon-close.png') no-repeat center / cover; text-indent: -9999px;}
+    .popupArea > div > button{position: absolute; right: 25px; top: 25px; width: 32px; aspect-ratio: 1 / 1; background: url('../images/icon-close.png') no-repeat center / cover; text-indent: -9999px;}
 
     @media screen and (max-width: 900px){
         .popupArea > div{flex-direction: column; height: auto;}
